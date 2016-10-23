@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C277DEAE1DBC94D2004A83AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C277DEAD1DBC94D2004A83AB /* main.m */; };
+		C277DEB11DBC94D2004A83AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C277DEB01DBC94D2004A83AB /* AppDelegate.m */; };
+		C277DEB41DBC94D2004A83AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C277DEB31DBC94D2004A83AB /* ViewController.m */; };
+		C277DEB71DBC94D2004A83AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C277DEB51DBC94D2004A83AB /* Main.storyboard */; };
+		C277DEB91DBC94D2004A83AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C277DEB81DBC94D2004A83AB /* Assets.xcassets */; };
+		C277DEBC1DBC94D2004A83AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C277DEBA1DBC94D2004A83AB /* LaunchScreen.storyboard */; };
+		C277DEC71DBC94D2004A83AB /* TripleStateTableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C277DEC61DBC94D2004A83AB /* TripleStateTableViewDemoTests.m */; };
+		C277DED21DBC94D2004A83AB /* TripleStateTableViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C277DED11DBC94D2004A83AB /* TripleStateTableViewDemoUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C277DEC31DBC94D2004A83AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C277DEA11DBC94D1004A83AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C277DEA81DBC94D2004A83AB;
+			remoteInfo = TripleStateTableViewDemo;
+		};
+		C277DECE1DBC94D2004A83AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C277DEA11DBC94D1004A83AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C277DEA81DBC94D2004A83AB;
+			remoteInfo = TripleStateTableViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C277DEA91DBC94D2004A83AB /* TripleStateTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripleStateTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C277DEAD1DBC94D2004A83AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C277DEAF1DBC94D2004A83AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C277DEB01DBC94D2004A83AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C277DEB21DBC94D2004A83AB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C277DEB31DBC94D2004A83AB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C277DEB61DBC94D2004A83AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C277DEB81DBC94D2004A83AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C277DEBB1DBC94D2004A83AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C277DEBD1DBC94D2004A83AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C277DEC21DBC94D2004A83AB /* TripleStateTableViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripleStateTableViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C277DEC61DBC94D2004A83AB /* TripleStateTableViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TripleStateTableViewDemoTests.m; sourceTree = "<group>"; };
+		C277DEC81DBC94D2004A83AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C277DECD1DBC94D2004A83AB /* TripleStateTableViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripleStateTableViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C277DED11DBC94D2004A83AB /* TripleStateTableViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TripleStateTableViewDemoUITests.m; sourceTree = "<group>"; };
+		C277DED31DBC94D2004A83AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C277DEA61DBC94D2004A83AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C277DEBF1DBC94D2004A83AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C277DECA1DBC94D2004A83AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C277DEA01DBC94D1004A83AB = {
+			isa = PBXGroup;
+			children = (
+				C277DEAB1DBC94D2004A83AB /* TripleStateTableViewDemo */,
+				C277DEC51DBC94D2004A83AB /* TripleStateTableViewDemoTests */,
+				C277DED01DBC94D2004A83AB /* TripleStateTableViewDemoUITests */,
+				C277DEAA1DBC94D2004A83AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C277DEAA1DBC94D2004A83AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C277DEA91DBC94D2004A83AB /* TripleStateTableViewDemo.app */,
+				C277DEC21DBC94D2004A83AB /* TripleStateTableViewDemoTests.xctest */,
+				C277DECD1DBC94D2004A83AB /* TripleStateTableViewDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C277DEAB1DBC94D2004A83AB /* TripleStateTableViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C277DEAF1DBC94D2004A83AB /* AppDelegate.h */,
+				C277DEB01DBC94D2004A83AB /* AppDelegate.m */,
+				C277DEB21DBC94D2004A83AB /* ViewController.h */,
+				C277DEB31DBC94D2004A83AB /* ViewController.m */,
+				C277DEB51DBC94D2004A83AB /* Main.storyboard */,
+				C277DEB81DBC94D2004A83AB /* Assets.xcassets */,
+				C277DEBA1DBC94D2004A83AB /* LaunchScreen.storyboard */,
+				C277DEBD1DBC94D2004A83AB /* Info.plist */,
+				C277DEAC1DBC94D2004A83AB /* Supporting Files */,
+			);
+			path = TripleStateTableViewDemo;
+			sourceTree = "<group>";
+		};
+		C277DEAC1DBC94D2004A83AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C277DEAD1DBC94D2004A83AB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C277DEC51DBC94D2004A83AB /* TripleStateTableViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				C277DEC61DBC94D2004A83AB /* TripleStateTableViewDemoTests.m */,
+				C277DEC81DBC94D2004A83AB /* Info.plist */,
+			);
+			path = TripleStateTableViewDemoTests;
+			sourceTree = "<group>";
+		};
+		C277DED01DBC94D2004A83AB /* TripleStateTableViewDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C277DED11DBC94D2004A83AB /* TripleStateTableViewDemoUITests.m */,
+				C277DED31DBC94D2004A83AB /* Info.plist */,
+			);
+			path = TripleStateTableViewDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C277DEA81DBC94D2004A83AB /* TripleStateTableViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C277DED61DBC94D2004A83AB /* Build configuration list for PBXNativeTarget "TripleStateTableViewDemo" */;
+			buildPhases = (
+				C277DEA51DBC94D2004A83AB /* Sources */,
+				C277DEA61DBC94D2004A83AB /* Frameworks */,
+				C277DEA71DBC94D2004A83AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TripleStateTableViewDemo;
+			productName = TripleStateTableViewDemo;
+			productReference = C277DEA91DBC94D2004A83AB /* TripleStateTableViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C277DEC11DBC94D2004A83AB /* TripleStateTableViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C277DED91DBC94D2004A83AB /* Build configuration list for PBXNativeTarget "TripleStateTableViewDemoTests" */;
+			buildPhases = (
+				C277DEBE1DBC94D2004A83AB /* Sources */,
+				C277DEBF1DBC94D2004A83AB /* Frameworks */,
+				C277DEC01DBC94D2004A83AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C277DEC41DBC94D2004A83AB /* PBXTargetDependency */,
+			);
+			name = TripleStateTableViewDemoTests;
+			productName = TripleStateTableViewDemoTests;
+			productReference = C277DEC21DBC94D2004A83AB /* TripleStateTableViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C277DECC1DBC94D2004A83AB /* TripleStateTableViewDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C277DEDC1DBC94D2004A83AB /* Build configuration list for PBXNativeTarget "TripleStateTableViewDemoUITests" */;
+			buildPhases = (
+				C277DEC91DBC94D2004A83AB /* Sources */,
+				C277DECA1DBC94D2004A83AB /* Frameworks */,
+				C277DECB1DBC94D2004A83AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C277DECF1DBC94D2004A83AB /* PBXTargetDependency */,
+			);
+			name = TripleStateTableViewDemoUITests;
+			productName = TripleStateTableViewDemoUITests;
+			productReference = C277DECD1DBC94D2004A83AB /* TripleStateTableViewDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C277DEA11DBC94D1004A83AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = amberease;
+				TargetAttributes = {
+					C277DEA81DBC94D2004A83AB = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					C277DEC11DBC94D2004A83AB = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C277DEA81DBC94D2004A83AB;
+					};
+					C277DECC1DBC94D2004A83AB = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C277DEA81DBC94D2004A83AB;
+					};
+				};
+			};
+			buildConfigurationList = C277DEA41DBC94D1004A83AB /* Build configuration list for PBXProject "TripleStateTableViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C277DEA01DBC94D1004A83AB;
+			productRefGroup = C277DEAA1DBC94D2004A83AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C277DEA81DBC94D2004A83AB /* TripleStateTableViewDemo */,
+				C277DEC11DBC94D2004A83AB /* TripleStateTableViewDemoTests */,
+				C277DECC1DBC94D2004A83AB /* TripleStateTableViewDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C277DEA71DBC94D2004A83AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C277DEBC1DBC94D2004A83AB /* LaunchScreen.storyboard in Resources */,
+				C277DEB91DBC94D2004A83AB /* Assets.xcassets in Resources */,
+				C277DEB71DBC94D2004A83AB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C277DEC01DBC94D2004A83AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C277DECB1DBC94D2004A83AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C277DEA51DBC94D2004A83AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C277DEB41DBC94D2004A83AB /* ViewController.m in Sources */,
+				C277DEB11DBC94D2004A83AB /* AppDelegate.m in Sources */,
+				C277DEAE1DBC94D2004A83AB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C277DEBE1DBC94D2004A83AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C277DEC71DBC94D2004A83AB /* TripleStateTableViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C277DEC91DBC94D2004A83AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C277DED21DBC94D2004A83AB /* TripleStateTableViewDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C277DEC41DBC94D2004A83AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C277DEA81DBC94D2004A83AB /* TripleStateTableViewDemo */;
+			targetProxy = C277DEC31DBC94D2004A83AB /* PBXContainerItemProxy */;
+		};
+		C277DECF1DBC94D2004A83AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C277DEA81DBC94D2004A83AB /* TripleStateTableViewDemo */;
+			targetProxy = C277DECE1DBC94D2004A83AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C277DEB51DBC94D2004A83AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C277DEB61DBC94D2004A83AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C277DEBA1DBC94D2004A83AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C277DEBB1DBC94D2004A83AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C277DED41DBC94D2004A83AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C277DED51DBC94D2004A83AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C277DED71DBC94D2004A83AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TripleStateTableViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amberease.TripleStateTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C277DED81DBC94D2004A83AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TripleStateTableViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amberease.TripleStateTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C277DEDA1DBC94D2004A83AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TripleStateTableViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amberease.TripleStateTableViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TripleStateTableViewDemo.app/TripleStateTableViewDemo";
+			};
+			name = Debug;
+		};
+		C277DEDB1DBC94D2004A83AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TripleStateTableViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amberease.TripleStateTableViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TripleStateTableViewDemo.app/TripleStateTableViewDemo";
+			};
+			name = Release;
+		};
+		C277DEDD1DBC94D2004A83AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TripleStateTableViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amberease.TripleStateTableViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TripleStateTableViewDemo;
+			};
+			name = Debug;
+		};
+		C277DEDE1DBC94D2004A83AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TripleStateTableViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amberease.TripleStateTableViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TripleStateTableViewDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C277DEA41DBC94D1004A83AB /* Build configuration list for PBXProject "TripleStateTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C277DED41DBC94D2004A83AB /* Debug */,
+				C277DED51DBC94D2004A83AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C277DED61DBC94D2004A83AB /* Build configuration list for PBXNativeTarget "TripleStateTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C277DED71DBC94D2004A83AB /* Debug */,
+				C277DED81DBC94D2004A83AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C277DED91DBC94D2004A83AB /* Build configuration list for PBXNativeTarget "TripleStateTableViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C277DEDA1DBC94D2004A83AB /* Debug */,
+				C277DEDB1DBC94D2004A83AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C277DEDC1DBC94D2004A83AB /* Build configuration list for PBXNativeTarget "TripleStateTableViewDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C277DEDD1DBC94D2004A83AB /* Debug */,
+				C277DEDE1DBC94D2004A83AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C277DEA11DBC94D1004A83AB /* Project object */;
+}
