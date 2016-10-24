@@ -7,7 +7,7 @@ AETripleStateTableView is a lightweight, customizable subclass of UITableView th
 # AETripleStateTableView
 A lightweight, customizable subclass of UITableView that supports triple states(loading, no data, normal). And it provides ability to customize it's UI elements using UIAppearance mechanism.
 
-![AETripleStateTableView](https://github.com/canicelebrate/AETripleStateTableView/blob/master/Screenshot.png?raw=true)
+![AETripleStateTableView](https://github.com/canicelebrate/AETripleStateTableView/blob/master/AETripleStateTableView.gif?raw=true)
 
 ## Setup
 ### Using [CocoaPods](http://cocoapods.org)
