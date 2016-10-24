@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AETripleStateTableView.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //AETripleStateTableView UI Customization
+    UILabel* lbl = [[UILabel alloc] init];
+    lbl.translatesAutoresizingMaskIntoConstraints = NO;
+    lbl.text = @"NO DATA";
+    lbl.textAlignment = NSTextAlignmentCenter;
+    [[AETripleStateTableView appearance] setNoDataView:lbl];
     return YES;
 }
 
