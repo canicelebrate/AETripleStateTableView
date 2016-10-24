@@ -74,15 +74,21 @@
         
         
         if(self.loadingView){
+            UITableViewCell* cell = nil;
             if([self.loadingView isKindOfClass:[UITableViewCell class]]){
-                return (UITableViewCell*)self.loadingView;
+                cell = (UITableViewCell*)self.loadingView;
             }
             else{
-                return [self buildCellFromView:self.loadingView];
+                cell = [self buildCellFromView:self.loadingView];
             }
+            //Forbid selection when loading
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return cell;
         }
         else if(self.loadingCellIdentifier){
             UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:self.loadingCellIdentifier];
+            //Enforce no selection even if user allows selection in the storeboard by mistake
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
         else{
@@ -290,6 +296,8 @@
 }
 
 
+
+
 #pragma mark - NSInvocation
 -(BOOL)respondsToSelector:(SEL)aSelector{
     if([super respondsToSelector:aSelector]){
@@ -371,6 +379,10 @@
                                                                  attribute:NSLayoutAttributeCenterY
                                                                 multiplier:1
                                                                   constant:0]];
+    
+    
+    //Forbid selection when loading
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
 
     return cell;

@@ -58,11 +58,71 @@
                     <navigationItem key="navigationItem" title="AETripleStateTableView" id="Aha-YT-dVX"/>
                     <connections>
                         <outlet property="tableView" destination="CHK-5X-C9R" id="gY3-Hq-Vz9"/>
+                        <segue destination="nOp-yn-YaZ" kind="push" identifier="showDetail" id="1uL-F1-AMK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Pet Detail-->
+        <scene sceneID="Dro-gI-iC4">
+            <objects>
+                <tableViewController id="nOp-yn-YaZ" customClass="ChildTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="h52-uH-fV9" customClass="AETripleStateTableView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailCell" id="jSe-H0-bDc">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jSe-H0-bDc" id="F26-68-Ofu">
+                                    <frame key="frameInset" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="明细" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpn-JA-rFN">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Cpn-JA-rFN" firstAttribute="centerX" secondItem="F26-68-Ofu" secondAttribute="centerX" id="DG6-ZJ-Zci"/>
+                                        <constraint firstItem="Cpn-JA-rFN" firstAttribute="centerY" secondItem="F26-68-Ofu" secondAttribute="centerY" id="K7d-GA-DTF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoDataCell" id="Nbj-k2-PRO">
+                                <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nbj-k2-PRO" id="8ge-n9-8jg">
+                                    <frame key="frameInset" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzZ-Z5-RJh">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lzZ-Z5-RJh" firstAttribute="centerX" secondItem="8ge-n9-8jg" secondAttribute="centerX" id="hx2-ol-wsk"/>
+                                        <constraint firstItem="lzZ-Z5-RJh" firstAttribute="centerY" secondItem="8ge-n9-8jg" secondAttribute="centerY" id="zlG-GS-nT2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nOp-yn-YaZ" id="lAa-hF-sFa"/>
+                            <outlet property="delegate" destination="nOp-yn-YaZ" id="ihp-aS-5CL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Pet Detail" id="xOc-DN-A1G"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zSm-5m-bbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2047" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CVY-p0-zLi">

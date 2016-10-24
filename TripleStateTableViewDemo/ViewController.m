@@ -62,6 +62,28 @@
     NSLog(@"%@",cell);
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if(self.tableView.state == AETripleStateTableViewNomal){
+        [self performSegueWithIdentifier:@"showDetail" sender:indexPath];
+    }
+    else if(self.tableView.state == AETripleStateTableViewNodata){
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Prompt" message:@"Pull to refresh data!" preferredStyle:UIAlertControllerStyleAlert];
+        
+        __weak ViewController* weakSelf = self;
+        UIAlertAction* confirmAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action){
+            weakSelf.tableView.state = AETripleStateTableViewLoading;
+            [weakSelf loadDataNeedEndRefresh:NO];
+        }];
+        
+        UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+        
+        [alertController addAction:confirmAction];
+        [alertController addAction:cancelAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+}
+
 
 #pragma mark - Help Methods
 -(void)loadDataNeedEndRefresh:(BOOL)endRefresh{

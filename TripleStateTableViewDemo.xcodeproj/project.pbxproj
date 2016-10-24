@@ -16,6 +16,7 @@
 		C277DEC71DBC94D2004A83AB /* TripleStateTableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C277DEC61DBC94D2004A83AB /* TripleStateTableViewDemoTests.m */; };
 		C277DED21DBC94D2004A83AB /* TripleStateTableViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C277DED11DBC94D2004A83AB /* TripleStateTableViewDemoUITests.m */; };
 		C277DEE21DBC950D004A83AB /* AETripleStateTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C277DEE11DBC950D004A83AB /* AETripleStateTableView.m */; };
+		C277DEE81DBE78D5004A83AB /* ChildTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C277DEE71DBE78D5004A83AB /* ChildTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		C277DED31DBC94D2004A83AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C277DEE01DBC950D004A83AB /* AETripleStateTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AETripleStateTableView.h; sourceTree = "<group>"; };
 		C277DEE11DBC950D004A83AB /* AETripleStateTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AETripleStateTableView.m; sourceTree = "<group>"; };
+		C277DEE61DBE78D5004A83AB /* ChildTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildTableViewController.h; sourceTree = "<group>"; };
+		C277DEE71DBE78D5004A83AB /* ChildTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				C277DEBA1DBC94D2004A83AB /* LaunchScreen.storyboard */,
 				C277DEBD1DBC94D2004A83AB /* Info.plist */,
 				C277DEAC1DBC94D2004A83AB /* Supporting Files */,
+				C277DEE61DBE78D5004A83AB /* ChildTableViewController.h */,
+				C277DEE71DBE78D5004A83AB /* ChildTableViewController.m */,
 			);
 			path = TripleStateTableViewDemo;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 			files = (
 				C277DEB41DBC94D2004A83AB /* ViewController.m in Sources */,
 				C277DEE21DBC950D004A83AB /* AETripleStateTableView.m in Sources */,
+				C277DEE81DBE78D5004A83AB /* ChildTableViewController.m in Sources */,
 				C277DEB11DBC94D2004A83AB /* AppDelegate.m in Sources */,
 				C277DEAE1DBC94D2004A83AB /* main.m in Sources */,
 			);
