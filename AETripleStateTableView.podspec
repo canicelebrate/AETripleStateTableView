@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "AETripleStateTableView"
-  s.version          = "0.9.0"
+  s.version          = "1.0.0"
   s.summary          = "A lightweight, customizable subclass of UITableView that supports triple states(loading, no data and normal)"
   s.homepage         = "https://github.com/canicelebrate/AETripleStateTableView"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
