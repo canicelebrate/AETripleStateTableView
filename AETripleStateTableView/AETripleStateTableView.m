@@ -166,7 +166,10 @@
         return [self.dataSource tableView:tableView canEditRowAtIndexPath:indexPath];
     }
     else{
-        return YES;
+        if(self.state == AETripleStateTableViewNomal){
+            return YES;
+        }
+        return NO;
     }
 }
 
@@ -294,6 +297,8 @@
     }
     return 0.0f;
 }
+
+
 
 
 
