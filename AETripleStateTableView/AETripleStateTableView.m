@@ -9,12 +9,10 @@
 #import "AETripleStateTableView.h"
 #include <objc/runtime.h>
 
-//struct objc_method_description *protocol_copyMethodDescriptionList(Protocol *p, BOOL isRequiredMethod, BOOL isInstanceMethod, unsigned int *outCount);
 
 
 @interface AETripleStateTableViewDataSourceDispatcher : NSObject<UITableViewDataSource,UITableViewDelegate>{
     NSDictionary<NSString*,NSNumber *>* _tableViewDelegateMethodsImplementedInfo;
-    id<UITableViewDelegate> _delegate;
 }
 @property (nonatomic,weak) id<UITableViewDataSource>        dataSource;
 @property (nonatomic,weak) id<UITableViewDelegate>          delegate;
@@ -29,7 +27,7 @@
 
 
 @implementation AETripleStateTableViewDataSourceDispatcher
-@dynamic delegate;
+@synthesize delegate = _delegate;
 
 #pragma mark - Properties
 -(id<UITableViewDelegate>)delegate{
@@ -95,7 +93,7 @@
             //build default loading view
             return [self buildDefaultLoadingCell];
         }
-
+        
     }
     else if(self.state == AETripleStateTableViewNodata){
         if(self.noDataView){
@@ -138,11 +136,12 @@
             NSLog(@"Unknown state:%lu found in function %s",(unsigned long)self.state,__func__);
         }
     }
-
+    
     return 1;
     
 }
 
+/**/
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;    // fixed font style. use custom view (UILabel) if you want something different
 {
     if([self.dataSource respondsToSelector:_cmd]){
@@ -157,6 +156,7 @@
     }
     return nil;
 }
+//*/
 
 // Editing
 
@@ -232,7 +232,7 @@
     else if(self.state == AETripleStateTableViewNodata || self.state == AETripleStateTableViewLoading){
         return tableView.bounds.size.height;
     }
-
+    
     return 0.0;
 }
 
@@ -248,6 +248,33 @@
     return 0.0;
 }
 
+-(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    if(self.state == AETripleStateTableViewNomal){
+        if([self.delegate respondsToSelector:_cmd]){
+            return [self.delegate tableView:tableView viewForHeaderInSection:section];
+        }
+    }
+    else if(self.state == AETripleStateTableViewNodata || self.state == AETripleStateTableViewLoading){
+        return [[UIView alloc] initWithFrame:CGRectZero];
+    }
+    return [[UIView alloc] initWithFrame:CGRectZero];
+}
+
+-(UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    
+    if(self.state == AETripleStateTableViewNomal){
+        if([self.delegate respondsToSelector:_cmd]){
+            return [self.delegate tableView:tableView viewForFooterInSection:section];
+        }
+    }
+    else if(self.state == AETripleStateTableViewNodata || self.state == AETripleStateTableViewLoading){
+        return [[UIView alloc] initWithFrame:CGRectZero];
+    }
+    return [[UIView alloc] initWithFrame:CGRectZero];
+}
+
+
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if(self.state == AETripleStateTableViewNomal){
         if([self.delegate respondsToSelector:_cmd]){
@@ -261,17 +288,6 @@
 }
 
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section NS_AVAILABLE_IOS(7_0){
-    if(self.state == AETripleStateTableViewNomal){
-        if([self.delegate respondsToSelector:_cmd]){
-            return [self.delegate tableView:tableView heightForHeaderInSection:section];
-        }
-    }
-    else if(self.state == AETripleStateTableViewNodata || self.state == AETripleStateTableViewLoading){
-        return 0.0f;
-    }
-    return 0.0f;
-}
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     if(self.state == AETripleStateTableViewNomal){
@@ -285,19 +301,32 @@
     return 0.0f;
 }
 
-
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForFooterInSection:(NSInteger)section NS_AVAILABLE_IOS(7_0){
-    if(self.state == AETripleStateTableViewNomal){
-        if([self.delegate respondsToSelector:_cmd]){
-            return [self.delegate tableView:tableView heightForFooterInSection:section];
-        }
-    }
-    else if(self.state == AETripleStateTableViewNodata || self.state == AETripleStateTableViewLoading){
-        return 0.0f;
-    }
-    return 0.0f;
-}
-
+//!!Important NOT TO implement estimatedHeightForHeaderInSection and estimatedHeightForFooterInSection, because if the real table view's delegate doesn't respond to those two methods, we don't know what's the real estimatedHeight for header or footer. If we return 0.0f here, the delegate method heightForHeaderInSection and heightForFooterInSection and subsequent viewForHeaderInSection and viewForFooterInSection will have no chance to be called
+/*
+ - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section NS_AVAILABLE_IOS(7_0){
+ if(self.state == AETripleStateTableViewNomal){
+ if([self.delegate respondsToSelector:_cmd]){
+ return [self.delegate tableView:tableView estimatedHeightForHeaderInSection:section];
+ }
+ }
+ else if(self.state == AETripleStateTableViewNodata || self.state == AETripleStateTableViewLoading){
+ return 0.0f;
+ }
+ return 0.0f;
+ }
+ 
+ - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForFooterInSection:(NSInteger)section NS_AVAILABLE_IOS(7_0){
+ if(self.state == AETripleStateTableViewNomal){
+ if([self.delegate respondsToSelector:_cmd]){
+ return [self.delegate tableView:tableView heightForFooterInSection:section];
+ }
+ }
+ else if(self.state == AETripleStateTableViewNodata || self.state == AETripleStateTableViewLoading){
+ return 0.0f;
+ }
+ return 0.0f;
+ }
+ //*/
 
 
 
@@ -305,13 +334,20 @@
 
 #pragma mark - NSInvocation
 -(BOOL)respondsToSelector:(SEL)aSelector{
+    NSString * strSelector = NSStringFromSelector(aSelector);
+    NSLog(@"check responds to selector:%@",strSelector);
     if([super respondsToSelector:aSelector]){
         return YES;
     }
     else{
+        
+        if([[strSelector substringToIndex:9] isEqualToString:@"tableView"]){
+            NSLog(@"tableview delegate found");
+        }
         if ([self isSeletorImplementedInTableViewDelegate:aSelector]){
             return YES;
         }
+        
         return NO;
     }
 }
@@ -319,7 +355,7 @@
 -(id)forwardingTargetForSelector:(SEL)aSelector{
     //如果UITableViewDelegate的方法在该类没有实现，但是在delegate中确有实现，那就让delegate去处理
     if([self isSeletorImplementedInTableViewDelegate:aSelector]){
-        return self.delegate;
+        return _delegate;
     }
     return [super forwardingTargetForSelector:aSelector];
 }
@@ -335,7 +371,7 @@
     _tableViewDelegateMethodsImplementedInfo = [[NSMutableDictionary alloc] initWithCapacity:numOfMethods];
     for (int i=0; i<numOfMethods; i++) {
         SEL aSelector = method_description_list[i].name;
-        if([self.delegate respondsToSelector:aSelector]){
+        if([_delegate respondsToSelector:aSelector]){
             [_tableViewDelegateMethodsImplementedInfo setValue:@YES forKey:NSStringFromSelector(aSelector)];
         }
         else{
@@ -389,7 +425,7 @@
     //Forbid selection when loading
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-
+    
     return cell;
 }
 
@@ -453,6 +489,10 @@
 -(void)setDelegate:(id<UITableViewDelegate>)delegate{
     self.dispatcher.delegate = delegate;
     super.delegate = self.dispatcher;
+}
+
+-(id<UITableViewDelegate>)delegate{
+    return super.delegate;
 }
 
 
